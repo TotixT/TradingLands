@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import tipoDineroRoutes from '../routes/tipoDinero.routes.js';
-// import dineroRoutes from '../routes/dinero.routes.js';
+import dineroRoutes from '../routes/dinero.routes.js';
 // import accionesRoutes from '../routes/accion.routes.js';
 // import traderRoutes from '../routes/trader.routes.js';
 
@@ -25,7 +25,7 @@ class Server {
 
     routes(){
         this.app.use(this.tipoDineroPath,tipoDineroRoutes);
-        // this.app.use(this.dineroPath,dineroRoutes);
+        this.app.use(this.dineroPath,dineroRoutes);
         // this.app.use(this.accionesPath,accionesRoutes);
         // this.app.use(this.traderPath,traderRoutes);
     }
